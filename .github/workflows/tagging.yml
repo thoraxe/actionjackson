@@ -7,6 +7,7 @@ on:
       - master
 jobs:
   autotag:
+    runs-on: ubuntu-latest
     name: Auto Tagging
     steps:
       - name: Checkout
