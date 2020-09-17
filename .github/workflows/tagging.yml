@@ -1,6 +1,12 @@
-name: tag-version
-  uses: juliansangillo/tag-version@v1.5
-  with:
-    production-branch: master
-    test-branch: test
-    dev-branch: develop
+name: Action Jackson
+jobs:
+  autotag:
+    name: Auto Tagging
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Version
+        id: version
+        uses: juliansangillo/tag-version@v1.5
