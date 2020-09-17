@@ -1,4 +1,10 @@
 name: Action Jackson
+on:
+  push:
+    branches:
+      - test
+      - develop
+      - master
 jobs:
   autotag:
     name: Auto Tagging
